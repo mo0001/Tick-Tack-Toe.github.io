@@ -1,0 +1,123 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #EA526F;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+header{
+    background-color: #1A936F;
+    width: 100vw;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title>h1{
+    color: #070600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.game-c{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 40rem;
+    margin-top: -2rem;
+}
+#game{
+    display: grid;
+    grid-template-rows: 33% 34% 33%;
+    grid-template-columns:33% 34% 33%;
+    height: 32rem;
+    width: 32rem;
+    border-radius: 2rem;
+    background-color:#279AF1 ;
+}
+.box{
+    height: 8rem;
+    width: 8rem;
+    border: none;
+    font-size: 5rem;
+    box-shadow: .1rem .1rem #070600;
+    border-radius: 2rem;
+    background-color:#F7F7FF ;
+}
+.cross_hv{
+    height: 8rem;
+    width: 8rem;
+    border: none;
+    font-size: 5rem;
+    box-shadow: .1rem .1rem #070600;
+    border-radius: 2rem;
+    background-color: #EA526F;
+}
+.cross{
+    height: 8rem;
+    width: 8rem;
+    border: none;
+    font-size: 5rem;
+    box-shadow: .1rem .1rem #070600;
+    border-radius: 2rem;
+    background-color: #EA526F;
+    background-image: url(Screenshot\ 2024-01-27\ 232910.png);
+    background-position: center;
+    background-size: cover;
+}
+.dot_hv{
+    height: 8rem;
+    width: 8rem;
+    border: none;
+    font-size: 5rem;
+    box-shadow: .1rem .1rem #070600;
+    border-radius: 2rem;
+    background-color: #1A936F;
+}
+.dot{
+    height: 8rem;
+    width: 8rem;
+    border: none;
+    font-size: 5rem;
+    box-shadow: .1rem .1rem #070600;
+    border-radius: 2rem;
+    background-color: #1A936F;
+    background-image: url(Screenshot\ 2024-01-27\ 233104.png);
+    background-position: center;
+    background-size: cover;
+
+}
+.o , .o3 {
+    border-right:solid black 1rem ;
+    border-bottom:solid black 1rem ;
+}
+.o1 , .o4 {
+    border-right:solid black 1rem ;
+    border-bottom:solid black 1rem ;
+}
+.o2 , .o5 {
+    border-bottom:solid black 1rem ;
+}
+.o6{
+    border-right:solid black 1rem ;
+}
+.o7{
+    border-right:solid black 1rem ;
+}
+.reset{
+    margin-top: -2rem;
+    height: 3rem;
+    width: 10rem;
+    font-size: larger;
+    font-weight: 600;
+    background-color:#1A936F;
+    color: #F7F7FF;
+    border-radius: 2rem;
+}
