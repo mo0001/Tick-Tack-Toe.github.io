@@ -26,20 +26,22 @@ for (const box of boxes) {
 function choose(Id) {
   let clss;
   let block = document.getElementById(Id);
-  if (turn == 1) {
+  if (turn == 1 && valid_p2 == false && valid_p1 == true) {
     clss = "dot";
     turn = 2;
     valid_p1 = false;
     valid_p2 = true;
-  } else if (turn == 2) {
+    block.classList.add(clss);
+    block.classList.remove("box", "cross");
+  } else if (turn == 2 && valid_p1 == false && valid_p2 == true) {
     clss = "cross";
     turn = 1;
     valid_p1 = true;
     valid_p2 = false;
+    block.classList.add(clss);
+    block.classList.remove("box", "dot");
   }
-  block.classList.add(clss);
-  block.classList.remove("box");
-  block.ariaDisabled = true;
+  block.setAttribute("disabled", true);
 }
 function reset() {
   for (const box of boxes) {
@@ -47,4 +49,7 @@ function reset() {
     box.classList.remove("dot");
     box.classList.add("box");
   }
+  // document.querySelectorAll(".b").setAttribute("disabled", false);
+  document.querySelectorAll(".b").forEach(button => button.disabled = false);
 }
+
