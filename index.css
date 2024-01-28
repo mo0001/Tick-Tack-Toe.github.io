@@ -59,6 +59,9 @@ header{
     box-shadow: .1rem .1rem #070600;
     border-radius: 2rem;
     background-color: #EA526F;
+    background-image: url(Screenshot\ 2024-01-27\ 232910.png);
+    background-position: center;
+    background-size: cover;
 }
 .cross{
     height: 8rem;
@@ -80,6 +83,9 @@ header{
     box-shadow: .1rem .1rem #070600;
     border-radius: 2rem;
     background-color: #1A936F;
+    background-image: url(Screenshot\ 2024-01-27\ 233104.png);
+    background-position: center;
+    background-size: cover;
 }
 .dot{
     height: 8rem;
