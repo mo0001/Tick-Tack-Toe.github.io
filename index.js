@@ -2,6 +2,7 @@ const boxes = document.querySelectorAll(".box");
 const res = document.querySelector(".result");
 let valid = true;
 let turn = 1;
+let count = 0;
 let valid_p1 = true;
 let valid_p2 = false;
 let win = false;
@@ -71,8 +72,10 @@ const win_pattern = [
   [0, 4, 8],
   [2, 4, 6],
 ];
+const reset = document.querySelector(".reset");
 for (const box of boxes) {
   box.addEventListener("click", () => {
+    count++;
     const check_winner = () => {
       for (let pattern of win_pattern) {
         let p1_val = boxes[pattern[0]].innerText;
@@ -89,6 +92,11 @@ for (const box of boxes) {
           res.innerText = `${p1_val} is winner`;
           valid = false;
           win = true;
+          reset.innerText="New Game"
+        }
+        else if (count==9&& win==false){
+          res.innerText="It's a tie"
+          reset.innerText="New Game"
         }
       }
     };
