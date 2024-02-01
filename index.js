@@ -1,12 +1,15 @@
+//selecting items
 const boxes = document.querySelectorAll(".box");
 const res = document.querySelector(".result");
+//pre declaring variables
 let valid = true;
 let turn = 1;
 let count = 0;
 let valid_p1 = true;
 let valid_p2 = false;
-let win = false;
+let win = false;//To identify tie situation
 //feature hover over elements
+//classes are predefined in css and are being added or removed as per need using class list
 for (const box of boxes) {
   box.addEventListener("mouseover", (event) => {
     if (turn == 1 && valid == true && valid_p1 == true && valid_p2 == false) {
@@ -28,6 +31,7 @@ for (const box of boxes) {
   });
 }
 //logic of Choosing move
+//Id of box is fetched using this.id (check html)
 function choose(Id) {
   let clss;
   let block = document.getElementById(Id);
@@ -92,11 +96,10 @@ for (const box of boxes) {
           res.innerText = `${p1_val} is winner`;
           valid = false;
           win = true;
-          reset.innerText="New Game"
-        }
-        else if (count==9&& win==false){
-          res.innerText="It's a tie"
-          reset.innerText="New Game"
+          reset.innerText = "New Game";
+        } else if (count == 9 && win == false) {
+          res.innerText = "It's a tie";
+          reset.innerText = "New Game";
         }
       }
     };
